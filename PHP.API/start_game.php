@@ -1,12 +1,7 @@
 <?php
 include 'db.php';
 
-/*
-  Expects parameters via POST:
-  - created_by: ID of the user who is creating the game
-  - player_ids: JSON array of player IDs, e.g. '["1","2","3"]'
-    (Make sure to pass a valid JSON string!)
-*/
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $created_by = $_POST['created_by'] ?? null;
     $player_ids = $_POST['player_ids'] ?? null;
